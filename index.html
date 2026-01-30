@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link href="OIP.jpg" rel="stylesheet">
+
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: sans-serif; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
 
         /* --- SCREEN 1: STATIC/GLITCH --- */
         #glitch-screen {
             position: fixed;
             width: 100%;
             height: 100%;
-            /* Using the static image you provided */
-            background: url('OIP.jpg'); 
+            background: url('OIP.jpg');
             background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,7 +39,9 @@
             transition: 0.2s;
         }
 
-        .click-btn:hover { transform: scale(1.1); }
+        .click-btn:hover {
+            transform: scale(1.1);
+        }
 
         /* --- SCREEN 2: GREEN PAGE & COLLAGE --- */
         #main-content {
@@ -40,17 +49,15 @@
             position: relative;
             width: 100%;
             height: 100vh;
-            background-color: #2ecc71; 
+            background-color: #2ecc71;
             overflow: hidden;
         }
 
         .name-center {
             position: absolute;
-            /* Moved up by changing top from 50% to 40% */
-            top: 40%; 
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-family: 'Cedarville Cursive', cursive;
             font-size: 5rem;
             color: black;
             z-index: 5;
@@ -65,7 +72,7 @@
             max-width: 250px;
         }
 
-        /* Positions for your photos */
+        /* Positions */
         .img1 { top: 5%; left: 5%; transform: rotate(-10deg); width: 200px; }
         .img2 { bottom: 10%; right: 5%; transform: rotate(15deg); width: 220px; }
         .img3 { top: 10%; right: 10%; transform: rotate(-5deg); width: 150px; }
@@ -73,9 +80,9 @@
         .img5 { top: 40%; left: 2%; transform: rotate(-15deg); width: 200px; }
         .img6 { top: 50%; right: 2%; transform: rotate(5deg); width: 300px; }
         .img7 { bottom: 20%; left: 40%; transform: rotate(-5deg); width: 180px; }
-
     </style>
 </head>
+
 <body>
 
     <audio id="bg-music" loop>
@@ -83,19 +90,21 @@
     </audio>
 
     <div id="glitch-screen">
-        <button class="click-btn" onclick="startExperience()">click me… and turn your sound on :)</button>
+        <button class="click-btn" onclick="startExperience()">
+            click me… and turn your sound on :)
+        </button>
     </div>
 
     <div id="main-content">
         <h1 class="name-center">Ukpono Udobong</h1>
 
-        <img src="silly.JPG" class="collage-img img1">
-        <img src="thumbs up.JPG" class="collage-img img2">
-        <img src="nigeria.jpg" class="collage-img img3">
-        <img src="chicago puff.jpg" class="collage-img img4">
-        <img src="green top.jpg" class="collage-img img5">
-        <img src="polaroids.jpg" class="collage-img img6">
-        <img src="white dress.JPG" class="collage-img img7">
+        <img src="silly.jpg" class="collage-img img1" alt="">
+        <img src="thumbs_up.jpg" class="collage-img img2" alt="">
+        <img src="nigeria.jpg" class="collage-img img3" alt="">
+        <img src="chicago_puff.jpg" class="collage-img img4" alt="">
+        <img src="green_top.jpg" class="collage-img img5" alt="">
+        <img src="polaroids.jpg" class="collage-img img6" alt="">
+        <img src="white_dress.jpg" class="collage-img img7" alt="">
     </div>
 
     <script>
@@ -109,3 +118,4 @@
 
 </body>
 </html>
+
