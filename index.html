@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: sans-serif; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
 
         /* --- SCREEN 1: STATIC/GLITCH --- */
         #glitch-screen {
             position: fixed;
             width: 100%;
             height: 100%;
-            background: url('https://media.giphy.com/media/oEI9uWUqW5n68/giphy.gif'); /* Static Overlay */
+            background: url('OIP.jpg'); /* ← CHANGED HERE */
             background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,19 +36,21 @@
             background: white;
             border: 3px solid black;
             cursor: pointer;
-            box-shadow: 5px 5px 0px red, -5px -5px 0px blue; /* Slight glitch look */
+            box-shadow: 5px 5px 0px red, -5px -5px 0px blue;
             transition: 0.2s;
         }
 
-        .click-btn:hover { transform: scale(1.1); }
+        .click-btn:hover {
+            transform: scale(1.1);
+        }
 
-        /* --- SCREEN 2: GREEN PAGE & COLLAGE --- */
+        /* --- SCREEN 2 --- */
         #main-content {
-            display: none; /* Hidden at start */
+            display: none;
             position: relative;
             width: 100%;
             height: 100vh;
-            background-color: #2ecc71; /* Green Page */
+            background-color: #2ecc71;
             overflow: hidden;
         }
 
@@ -50,22 +61,17 @@
             transform: translate(-50%, -50%);
             font-family: 'Cedarville Cursive', cursive;
             font-size: 5rem;
-            color: black;
             z-index: 5;
-            text-align: center;
             text-shadow: 2px 2px 10px rgba(255,255,255,0.5);
         }
 
-        /* --- THE COLLAGE --- */
         .collage-img {
             position: absolute;
             border: 5px solid white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             max-width: 250px;
-            transition: 0.3s;
         }
 
-        /* Random positioning for the images provided */
         .img1 { top: 5%; left: 5%; transform: rotate(-10deg); width: 200px; }
         .img2 { bottom: 10%; right: 5%; transform: rotate(15deg); width: 220px; }
         .img3 { top: 10%; right: 10%; transform: rotate(-5deg); width: 150px; }
@@ -73,10 +79,9 @@
         .img5 { top: 40%; left: 2%; transform: rotate(-15deg); width: 200px; }
         .img6 { top: 50%; right: 2%; transform: rotate(5deg); width: 300px; }
         .img7 { bottom: 20%; left: 40%; transform: rotate(-5deg); width: 180px; }
-        .img8 { top: 2%; left: 45%; transform: rotate(8deg); width: 120px; }
-
     </style>
 </head>
+
 <body>
 
     <audio id="bg-music" loop>
@@ -84,7 +89,9 @@
     </audio>
 
     <div id="glitch-screen">
-        <button class="click-btn" onclick="startExperience()">click me… and turn your sound on :)</button>
+        <button class="click-btn" onclick="startExperience()">
+            click me… and turn your sound on :)
+        </button>
     </div>
 
     <div id="main-content">
@@ -101,14 +108,8 @@
 
     <script>
         function startExperience() {
-            // Play the music
-            const music = document.getElementById('bg-music');
-            music.play();
-
-            // Hide the glitch screen
+            document.getElementById('bg-music').play();
             document.getElementById('glitch-screen').style.display = 'none';
-
-            // Show the main content
             document.getElementById('main-content').style.display = 'block';
         }
     </script>
